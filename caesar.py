@@ -1,7 +1,7 @@
 from helpers import alphabet_position, rotate_character
 def encrypt(text, rot):
     """receives a string(text) and an integer(rot) and rotates the string rot amount of times"""
-    myAlphabet = 'abcdefghijklmnopqrstuv'
+    myAlphabet = 'abcdefghijklmnopqrstuvwxyz'
     newStr = ''
     for char in text:
         newStr += rotate_character(char, rot)

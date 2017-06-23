@@ -1,5 +1,6 @@
 from flask import Flask, request
 from caesar import encrypt
+import cgi
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -50,6 +51,7 @@ def encrypt1():
     text = request.form["text"]
     rot = int(rot)
     text = str(text)
+    text = cgi.escape(text)
 
     context = encrypt(text,rot)
     context = str(context)
